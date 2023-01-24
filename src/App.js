@@ -2,6 +2,7 @@ import logo from './logo.svg';
 import './App.css';
 import Counter from './Counter';
 import { createContext, useState } from 'react';
+import CounterWithReducer from './CounterWithReducer';
 
 export const CounterContext = createContext();
 function App() {
@@ -12,8 +13,9 @@ function App() {
    };
    return (
       <CounterContext.Provider value={value}>
-         <div className="App">
+         <div className="App flex items-center justify-center h-screen">
             <Counter></Counter>
+            <CounterWithReducer></CounterWithReducer>
          </div>
       </CounterContext.Provider>
    );
